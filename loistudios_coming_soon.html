@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LỐI STUDIOS — Coming Soon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      width: 100%; height: 100%;
+      background: #F7F4EF;
+      color: #1A1714;
+      font-family: 'DM Mono', monospace;
+      font-weight: 300;
+    }
+
+    .wrap {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 48px 60px;
+    }
+
+    /* TOP NAV */
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: auto;
+    }
+
+    .wordmark {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      line-height: 1;
+    }
+
+    .wordmark-loi {
+      display: block;
+      font-size: 52px;
+      letter-spacing: 0.2em;
+    }
+
+    .wordmark-studios {
+      display: block;
+      font-size: 13px;
+      letter-spacing: 0.55em;
+      color: #888;
+      margin-top: 4px;
+    }
+
+    .top-meta {
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #aaa;
+      text-align: right;
+      line-height: 2.4;
+    }
+
+    /* HERO */
+    .hero {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 0 60px;
+    }
+
+    .coming-label {
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #B8955A;
+      margin-bottom: 28px;
+    }
+
+    .coming-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 88px;
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      line-height: 0.95;
+      color: #1A1714;
+      margin-bottom: 12px;
+    }
+
+    .coming-soon {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 88px;
+      font-weight: 300;
+      font-style: italic;
+      letter-spacing: 0.06em;
+      line-height: 0.95;
+      color: #1A1714;
+      margin-bottom: 48px;
+    }
+
+    .gold-line {
+      width: 40px;
+      height: 0.5px;
+      background: #B8955A;
+      margin: 0 auto 40px;
+    }
+
+    .tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 300;
+      font-style: italic;
+      letter-spacing: 0.1em;
+      color: #888;
+      margin-bottom: 8px;
+    }
+
+    .collection {
+      font-size: 9px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #C8C0B0;
+      margin-bottom: 52px;
+    }
+
+    /* FORM */
+    .form-wrap {
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto 12px;
+      display: flex;
+      border: 0.5px solid #1A1714;
+    }
+
+    .form-input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      padding: 15px 18px;
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      color: #1A1714;
+    }
+
+    .form-input::placeholder { color: #C8C0B0; }
+
+    .form-btn {
+      background: #1A1714;
+      border: none;
+      padding: 15px 24px;
+      font-family: 'DM Mono', monospace;
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #F7F4EF;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.2s;
+    }
+
+    .form-btn:hover { background: #333; }
+
+    .form-msg {
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      color: #B8955A;
+      min-height: 18px;
+      text-align: center;
+    }
+
+    /* BOTTOM */
+    .bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding-top: 36px;
+      border-top: 0.5px solid #E0DDD7;
+      margin-top: auto;
+    }
+
+    .contact-block {
+      font-size: 9px;
+      letter-spacing: 0.1em;
+      color: #aaa;
+      line-height: 2.2;
+    }
+
+    .contact-block a {
+      color: #aaa;
+      text-decoration: none;
+      border-bottom: 0.5px solid transparent;
+      transition: all 0.2s;
+    }
+
+    .contact-block a:hover {
+      color: #1A1714;
+      border-bottom-color: #B8955A;
+    }
+
+    .socials {
+      display: flex;
+      gap: 24px;
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .socials a {
+      color: #aaa;
+      text-decoration: none;
+      border-bottom: 0.5px solid transparent;
+      padding-bottom: 1px;
+      transition: all 0.2s;
+    }
+
+    .socials a:hover {
+      color: #1A1714;
+      border-bottom-color: #B8955A;
+    }
+
+    @media (max-width: 680px) {
+      .wrap { padding: 36px 28px; }
+      .coming-title, .coming-soon { font-size: 56px; }
+      .wordmark-loi { font-size: 36px; }
+      .bottom { flex-direction: column; gap: 24px; align-items: flex-start; }
+      .top-meta { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="top">
+      <div class="wordmark">
+        <span class="wordmark-loi">LỐI</span>
+        <span class="wordmark-studios">Studios</span>
+      </div>
+      <div class="top-meta">
+        Menswear · Relaxed Minimalism<br>
+        Est. 2026 · Vietnam
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="coming-label">— Architectural Essentials —</div>
+      <div class="coming-title">Coming</div>
+      <div class="coming-soon">Soon</div>
+      <div class="gold-line"></div>
+      <div class="tagline">Dress with intention. Move in silence.</div>
+      <div class="collection">SS2026 · Launching soon</div>
+
+      <div class="form-wrap">
+        <input class="form-input" type="email" placeholder="Enter your email" id="loi-email" />
+        <button class="form-btn" onclick="handleNotify()">Notify me</button>
+      </div>
+      <div class="form-msg" id="loi-msg"></div>
+    </div>
+
+    <div class="bottom">
+      <div class="contact-block">
+        <a href="mailto:hello@loistudios.com">hello@loistudios.com</a><br>
+        loistudios.com
+      </div>
+      <div class="socials">
+        <a href="https://www.instagram.com/loi.studios/" target="_blank">Instagram</a>
+        <a href="https://www.facebook.com/loistudios" target="_blank">Facebook</a>
+        <a href="https://tiktok.com/@loistudios" target="_blank">TikTok</a>
+      </div>
+    </div>
+
+  </div>
+
+  <script async type='text/javascript' src='https://static.klaviyo.com/onsite/js/VPFyp4/klaviyo.js?company_id=VPFyp4'></script>
+  <script type="text/javascript">
+    !function(){if(!window.klaviyo){window._klOnsite=window._klOnsite||[];try{window.klaviyo=new Proxy({},{get:function(n,i){return"push"===i?function(){var n;(n=window._klOnsite).push.apply(n,arguments)}:function(){for(var n=arguments.length,o=new Array(n),w=0;w<n;w++)o[w]=arguments[w];var t="function"==typeof o[o.length-1]?o.pop():void 0,e=new Promise((function(n){window._klOnsite.push([i].concat(o,[function(i){t&&t(i),n(i)}]))}));return e}}})}catch(n){window.klaviyo=window.klaviyo||[],window.klaviyo.push=function(){var n;(n=window._klOnsite).push.apply(n,arguments)}}}}();
+  </script>
+  <script>
+    function handleNotify() {
+      const email = document.getElementById('loi-email').value;
+      const msg = document.getElementById('loi-msg');
+      if (!email || !email.includes('@')) {
+        msg.style.color = '#C8C0B0';
+        msg.textContent = 'Please enter a valid email.';
+        return;
+      }
+      if (window.klaviyo) {
+        window.klaviyo.push(['identify', { email: email, source: 'LỐI Studios Coming Soon' }]);
+      }
+      msg.style.color = '#B8955A';
+      msg.textContent = 'You will be the first to know.';
+      document.getElementById('loi-email').value = '';
+    }
+    document.getElementById('loi-email').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') handleNotify();
+    });
+  </script>
+</body>
+</html>
